@@ -111,7 +111,7 @@ def run_act_2(chat_id, floor_type):
     send_typing(chat_id, "Прислушайся. Слышишь?", 3)
     
     # Отправляем первый звук (voice1.mp3)
-    send_scary_voice(chat_id, "media/voice1.mp3.mp3", 5)
+    send_scary_voice(chat_id, "media/voice.mp3.mp3", 5)
     
     time.sleep(4)
     markup = types.InlineKeyboardMarkup(row_width=1)
