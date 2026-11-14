@@ -111,7 +111,7 @@ def run_act_2(chat_id, floor_type):
     send_typing(chat_id, "Прислушайся. Слышишь?", 3)
     
     # Отправляем первый звук (voice1.mp3)
-    send_scary_voice(chat_id, "media/voice1.mp3", 5)
+    send_scary_voice(chat_id, "media/voice1.mp3.mp3", 5)
     
     time.sleep(4)
     markup = types.InlineKeyboardMarkup(row_width=1)
@@ -139,7 +139,7 @@ def run_act_3(chat_id, choice, user):
     send_typing(chat_id, "Посмотри в тёмный угол своей комнаты. Или под кровать.", 4)
     
     # Отправляем второй звук (voice2.mp3)
-    send_scary_voice(chat_id, "media/voice2.mp3", 4)
+    send_scary_voice(chat_id, "media/voice2.mp3.mp3", 4)
     
     time.sleep(5)
     send_typing(chat_id, "Не оборачивайся. Просто посчитай вместе со мной...", 3)
@@ -150,7 +150,7 @@ def run_act_3(chat_id, choice, user):
     # Отправляем финальный видео-скример (screamer.mp4)
     time.sleep(1)
     bot.send_chat_action(chat_id, 'upload_video')
-    video_path = find_media("media/screamer.mp4")
+    video_path = find_media("media/screamer.mp4.mp4")
     with open(video_path, 'rb') as video:
         bot.send_video(chat_id, video)
         
